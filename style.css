@@ -120,6 +120,7 @@ body {
   width: 100%;
   border-radius: 0.4rem;
   text-transform: uppercase;
+  margin: 1rem 0;
   transition: all 0.2s ease-in-out;
 }
 
@@ -132,7 +133,11 @@ body {
 .find-works {
   color: var(--btn-primary);
   border: 2px solid currentColor;
-  background-color: var(--color-60-dark);
+  background-color: transparent;
+}
+
+.find-works:first-child {
+  margin-right: 0.2rem;
 }
 
 /* ------------------------------
@@ -157,7 +162,7 @@ body {
 
 .icons {
   width: 2rem;
-  height: 5rem;
+  height: 2rem;
   fill: var(--icon-color);
   transition: all 0.2s ease-in;
 }
