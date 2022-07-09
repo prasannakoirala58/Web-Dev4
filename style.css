@@ -8,19 +8,39 @@
   --btn-light: #ff7370; /* #fd5e53  #ff706d #ff7370 primary */
   --icon-color: #ccc;
   --icon-color-hover: #edfdee;
+
+  --bp-largest: 75em; /* 1200/16 = 75 */
+  --bp-large: 68.75em; /* 1100/16 = 68.75 */
+  --bp-medium: 56.25em; /* 900/16 = 65.25 */
+  --bp-small: 37.5em; /* 600/16 = 37.5 */
+  --bp-smallest: 31.25em; /* 500/16 = 31.25 */
 }
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 
-  @media only screen and(max-width: 768px) {
-    font-size: 50%;
+  @media (max-width: 1100px) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 1040px) {
+    font-size: 37.5%;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 31.25%;
   }
 }
 
@@ -192,6 +212,7 @@ body {
 
 .coder-guy {
   width: 100%;
+  /* height: 100%; */
   margin-top: 3rem;
   padding: 2rem;
   object-position: center center;
@@ -209,4 +230,114 @@ body {
   line-height: 8rem;
   color: var(--color-text);
   font-size: 1.8rem;
+}
+
+/* ------------------------------
+// MEDIA QUERIES */
+@media (max-width: 1100px) {
+  .container {
+    width: 75%;
+  }
+
+  .heading {
+    font-size: 6rem;
+  }
+
+  .my-name {
+    color: var(--btn-primary);
+    font-size: 3rem;
+  }
+
+  .paragraphs {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--color-text);
+    width: 100%;
+    line-height: 1.75;
+    margin: 2rem 0;
+  }
+
+  .buttons {
+    width: 60%;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    padding: 1.4rem;
+    width: 90%;
+    border-radius: 0.3rem;
+    margin: 0.8rem 0;
+  }
+
+  .icons {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .footer {
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 86%;
+  }
+
+  .heading {
+    font-size: 4.5rem;
+  }
+
+  .my-name {
+    color: var(--btn-primary);
+    font-size: 2.5rem;
+  }
+
+  .paragraphs {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--color-text);
+    width: 100%;
+    line-height: 1.75;
+    margin: 2rem 0;
+  }
+
+  .buttons {
+    width: 54%;
+  }
+
+  .btn {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 0.3rem;
+    margin: 0.5rem 0;
+  }
+
+  .icons {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .footer {
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+  }
 }
